@@ -1,0 +1,51 @@
+/*Imports*/
+@import 'index.scss';
+
+/****Header****/
+
+.nav {
+    display: flex;
+    margin: 50px 7%;
+    width: 86.11%;
+    justify-content: space-between;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        margin: 20px 5.33%;
+        width: 89.33%;
+
+        &-logo {
+            width: 145px;
+            height: 47px; 
+        }
+    }
+
+    &-list {
+        display: flex;
+        gap: 57px;
+        width: 269px;
+        padding-left: 0;
+        list-style-type: none;
+        justify-content: end;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            gap: 26px;
+        }
+
+        &__link {
+            @include text-style($text-color, $font-size-mdlg);
+            text-decoration: none;
+            
+            /*Responsive mobile*/
+            @include responsive (375px , 720px){
+                font-size: $font-size-xsm;
+                text-transform: uppercase;
+            }
+        }
+
+        &__link.active {
+            text-decoration: underline;
+        }
+    }
+}

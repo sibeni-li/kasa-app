@@ -1,0 +1,43 @@
+/*Imports*/
+@import 'index.scss';
+
+/****Footer****/
+
+.footer {
+    background-color: black;
+    margin-top: 30px;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        margin-top: 20px;
+    }
+
+    &-infos {
+        padding: 50px 100px 0 100px;
+        @include flex-center;
+        flex-direction: column;
+        justify-content: end;
+        gap: 20px;
+        height: 209px;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            padding: 0;
+            gap: 10px;
+            height: 209px;
+            justify-content: center;
+        }
+
+        &__rights {
+            @include text-style(white , $font-size-mdlg);
+
+            /*Responsive mobile*/
+            @include responsive (375px , 720px){
+                font-size: $font-size-xsm;
+                width: 130px;
+                text-align: center;
+            }
+        }
+    }
+    
+}

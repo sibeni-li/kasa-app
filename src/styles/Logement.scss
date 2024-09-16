@@ -1,0 +1,181 @@
+/*Imports*/
+@import 'index';
+
+/****Logement****/
+
+/*Description of lodge*/
+/*Title, location, TAG, host and rating*/
+.lodge {
+    width: 86.11%;
+    margin: 0 7% 50px 7%;
+
+    /*Responsive mobile*/
+    @include responsive(375px , 720px) {
+        width: 89.33%;
+        margin:20px 5.33%;
+    }
+
+    &-about{
+        display: flex;
+        justify-content: space-between;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            flex-direction: column;  
+        }
+    }
+
+    &-information {
+        display: flex;
+        flex-direction: column;
+    
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            justify-content: center;
+        }
+    }
+
+    &-information__title {
+        @include text-style($main-color , $font-size-lg);
+        margin-bottom: 5px;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            font-size: $font-size-md;
+            margin-top: 0;
+        }
+    }
+
+    &-information__location {
+        @include text-style($text-color , $font-size-md);
+        margin: 0;
+        margin-bottom: 9px;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            font-size: $font-size-sm;
+            margin-top: 10px;
+        }
+    }
+}
+
+.tag-container ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    padding: 0;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        margin: 5px 0 0 0;
+    }
+}
+
+.host-information-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    margin: 10px 0;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+    }
+}
+
+.host-infos {
+    @include text-style($main-color, $font-size-md);
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        font-size: $font-size-xsm;   
+    }
+}
+
+.lodge-host-name {
+    width: 93px;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        width: 60px;    
+    }
+}
+
+.lodge-host-picture {
+    width: 64px;
+    border-radius: $border-radius-xlg;
+    margin: 10px 0;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        width: 32px;
+        height: 32px;  
+    }
+}
+
+.rating {
+    width: 196px;
+    display: flex;
+    justify-content: space-between;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        width: 98px;
+        height: 18px;    
+    }
+}
+
+/****Collapse****/
+
+.collapse-box__lodges {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /*Collapse modification to
+    conform to the model*/
+    & .collapse {
+        width:50%;
+
+        @include responsive (375px , 720px){
+            width: 100%;
+            margin-left: 0;
+        }
+
+        &__title , &__content {
+            font-size: $font-size-md;
+
+            /*Responsive mobile*/
+            @include responsive (375px , 720px){
+                font-size: 13px;
+            }
+        }
+
+        &__title {
+            margin-top: 9px;
+
+            /*Responsive mobile*/
+            @include responsive (375px , 720px){
+                margin-top: 0;  
+            }   
+        }
+        
+        &__content{
+            list-style-type: none;
+        
+        }
+    }
+}

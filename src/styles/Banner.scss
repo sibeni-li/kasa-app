@@ -1,0 +1,47 @@
+/*Imports*/
+@import 'index.scss';
+
+/****Banner****/
+
+.banner {
+    margin: 0 6.9%;
+    max-height: 223px;
+    width: 86.11%;
+    
+    /*Responsive mobile*/
+    @include responsive(375px, 720px){
+        margin: 20px 5.33%;
+        max-height: 111px; 
+        width: 89.33%;
+    }
+    &__img {
+        width: 100%;
+        height: 223px;
+        object-fit: cover;
+        border-radius: $border-radius-lg;
+        box-shadow: $shadow;
+        /*Responsive mobile*/
+        @include responsive(375px, 720px){
+            height: 111px;
+            border-radius: 10px;
+        }
+    }
+    &__text {
+        @include text-style (white , 48px , 700);
+        width: 100%;
+        text-align: center;
+        position: relative;
+        bottom: 200px;
+        text-shadow: $shadow;
+
+        /*Responsive mobile*/
+        @include responsive(375px, 720px){
+            font-size: $font-size-mdlg;
+            bottom: 111px;
+            width: 240px;
+            text-align: left;
+            padding-left: 10px;
+        }
+    }
+}
+

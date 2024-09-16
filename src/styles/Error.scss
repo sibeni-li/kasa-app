@@ -1,0 +1,53 @@
+/*Imports*/
+@import 'index';
+
+/****Error****/
+
+.error {
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    color: $main-color;
+
+    &__title , &__link {
+        margin: 100px 0;
+    }
+
+    &__title {
+        font-size: 288px;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            font-size: 96px;
+        }
+    }
+
+    &__text {
+        @include text-style($main-color , $font-size-lg);
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            width: 260px;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        @include text-style($text-color , $font-size-md);
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            font-size: 14px;
+        }
+    }
+}
+
+.br {
+    display: none;
+    
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        display: block;
+    }
+}

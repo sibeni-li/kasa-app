@@ -1,0 +1,21 @@
+/*Imports*/
+@import 'index';
+
+/****Tag****/
+
+.tag {
+    background-color: $main-color;
+    @include text-style(white , $font-size-sm , 700);
+    min-width: 115px;
+    padding: 4px 17.5px;
+    text-align: center;
+    border-radius: $border-radius-md;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        min-width: 84px;
+        font-size: 10px;
+        padding: 4px 12.5px;
+        border-radius: $border-radius-sm;
+    }
+}

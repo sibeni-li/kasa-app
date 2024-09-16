@@ -1,0 +1,22 @@
+/*Imports*/
+@import 'index.scss';
+
+/****Banner****/
+
+/*Banner modification to
+conform to the model*/
+.banner__img {
+    filter: brightness(0.7);
+}
+
+/****Information****/
+
+.collapse-box__about {
+    @include flex-center;
+    flex-direction: column;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        gap: 20px;  
+    }
+}

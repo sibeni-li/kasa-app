@@ -1,0 +1,80 @@
+/*Imports*/
+@import 'index.scss';
+
+
+/****Slideshow****/
+
+.slide-show {
+    width: 100%;
+    height: 415px;
+    position: relative;
+    left: 7%;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        height: 255px;
+        left: 5.33%;
+    }
+
+    &__img{
+        width: 86.11%;
+        height: 415px;
+        border-radius: $border-radius-lg;
+        object-fit: cover;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            width: 89.33%;
+            height: 255px;
+            border-radius: $border-radius-md;
+            margin: 0;
+        }
+
+        &.alone {
+            margin-left: 0;
+        }
+    }
+
+    &.alone {
+        text-align: center;
+        position:inherit;
+    }
+
+    &__back , &__forward{
+        width: 96px;
+        height: 119px;
+        position: absolute;
+        bottom: 140px;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            width: 24px;
+            height: 24px;
+            bottom: 115px;
+        }
+    }
+    
+    &__forward {
+        right: 13.8%;
+
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            right: 10.5%;
+        }
+    }
+}
+
+.lodge-number {
+    @include text-style(white , $font-size-md);
+    text-align: center;
+    position: absolute;
+    width: 24px;
+    height: 32px;
+    bottom: 0;
+    left: 42%;
+    
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        display: none;
+    }
+}
